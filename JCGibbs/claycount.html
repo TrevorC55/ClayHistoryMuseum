@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <style>
+
+    </style>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(39.317619,-94.479976), 
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+ <script src="https://www.google.com/maps/d/u/0/embed?mid=1nKKh7NPnr2yTiHqkPXzbw4zvxlaGJmg&ehbc=2E312F"></script>
+    
+    <!-- "https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+
+<script>
+                 var map;
+
+                 function initializtionCallBack(){
+                    map = new google.maps.Map(document.getElementById('googleMap'),{
+                        center: {
+                            lat: 39.317619,
+                            lng: -94.479976
+                        },
+                        zoom: 11
+                    });
+                    var ClayCountyDelimiters = [
+    {lng: -94.6082, lat: 39.1147},
+    {lng: -94.6083, lat: 39.1204},
+    {lng: -94.5975, lat: 39.1336 },
+     {lng: -94.5942, lat: 39.139},
+      {lng: -94.5927, lat: 39.1453}, 
+      {lng: -94.5931, lat: 39.1489},
+       {lng: -94.5984, lat: 39.1579}, 
+       {lng: -94.6044, lat: 39.16}, 
+       {lng: -94.6059, lat: 39.4561},
+        {lng: -94.2113, lat: 39.4535}, 
+        {lng: -94.2127, lat: 39.2073 },
+        {lng: -94.2222, lat: 39.2099 },
+        {lng: -94.2331, lat: 39.2179}, 
+        {lng: -94.2405, lat: 39.2305 },
+        {lng: -94.2459, lat: 39.2336 },
+        {lng: -94.2561, lat: 39.2362}, 
+        {lng: -94.2703, lat: 39.2351}, 
+        {lng: -94.2906, lat: 39.2371 },
+        {lng: -94.307, lat: 39.2291 },
+       {lng: -94.318, lat: 39.2176} ,
+       {lng: -94.3253, lat: 39.2007}, 
+        {lng: -94.3386, lat: 39.1856 },
+        {lng: -94.3718, lat: 39.1611 },
+        {lng: -94.3779, lat: 39.1655 },
+        {lng: -94.3847, lat: 39.1763 },
+        {lng: -94.3885, lat: 39.188} ,
+       { lng: -94.3934, lat: 39.1938 },
+        {lng: -94.3989, lat: 39.1969 },
+        {lng: -94.4054, lat: 39.1982}, 
+        {lng: -94.4107, lat: 39.1963 },
+       {lng: -94.413, lat: 39.1931 },
+        {lng: -94.4036, lat: 39.1755 },
+        {lng: -94.4063, lat: 39.1655 },
+       {lng: -94.4271, lat: 39.143}, 
+        {lng: -94.4592, lat: 39.1226 },
+       {lng: -94.4651, lat: 39.1229 },
+       {lng: -94.4883, lat: 39.1439 },
+       {lng: -94.5039, lat: 39.1504 },
+       {lng: -94.508, lat: 39.1508 },
+       {lng: -94.5334, lat: 39.1463},
+         {lng: -94.5393, lat: 39.1426 },
+        {lng: -94.5455, lat: 39.1343 },
+         {lng: -94.5531, lat: 39.1287 },
+         {lng: -94.566, lat: 39.1231}, 
+         {lng: -94.5889, lat: 39.115},
+         {lng: -94.6082, lat: 39.1147},
+  
+];
+var ClayCountyPolygon = new google.maps.Polygon({
+    paths: ClayCountyDelimiters,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 3, 
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+})
+
+ClayCountyPolygon.setMap(map);
+                 }
+              
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+For the PHP search to work the mySQL needs to have a search user created with privileges to search the database and table.
+
+listed below are the variables that need to be edited in search.php
+$servername = "localhost";
+$username = "user name of search user";
+$password = "password of search user";
+$db = "database on mysql";
+$table = "table with data on mysql";
